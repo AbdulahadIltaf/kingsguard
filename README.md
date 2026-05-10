@@ -1,3 +1,12 @@
+---
+title: KingsGuard
+emoji: 🛡️
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+---
+
 # 🛡️ KingsGuard: 5-Layer Agentic Security Framework
 
 **KingsGuard** is a mathematically rigorous, defense-in-depth security framework designed specifically for Autonomous Agent systems (like CrewAI). It prevents Prompt Injections, Zero-Day Exploits, Sleeper Agents, and Telemetry Poisoning through a unique multi-layered architecture.
