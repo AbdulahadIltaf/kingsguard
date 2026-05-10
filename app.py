@@ -823,4 +823,4 @@ if __name__ == "__main__":
     print("  Auto-preloading models synchronously...")
     print("=" * 60)
     _preload_all()
-    app.run(debug=False, host="0.0.0.0", port=8000, threaded=True)
+    app.run(debug=False, host="0.0.0.0", port=int(os.getenv("PORT", 7860)), threaded=True)
