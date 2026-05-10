@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+
+# Models & Weights (Large Files)
+models/
+*.pth
+*.safetensors
+*.bin
+
+# Data & Storage
+data/storage/*.db
+data/storage/*.json
+data/datasets/
+!data/datasets/.gitkeep
+extras/
+scratch/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Documentation Artifacts
+kingsguard_architecture_report.md
+walkthrough.md
+implementation_plan.md
+task.md
