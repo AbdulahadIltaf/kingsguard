@@ -16,9 +16,10 @@ models/
 # Data & Storage
 data/storage/*
 !data/storage/final_causal_model.db
-data/storage/*.json
+!data/storage/bench_all_results.json
 data/datasets/*
 !data/datasets/injecagent_data/
+data/datasets/injecagent_data/MPDD.csv
 !data/datasets/.gitkeep
 extras/
 scratch/

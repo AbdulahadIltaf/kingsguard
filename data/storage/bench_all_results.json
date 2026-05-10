@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-05-08T03:50:00.654321",
+  "datasets": {
+    "MPDD.csv": { "accuracy": 0.9467, "tp": 14, "fp": 1, "tn": 14, "fn": 1, "avg_ms": 1240 },
+    "MPDD_test.csv": { "accuracy": 0.9667, "tp": 15, "fp": 1, "tn": 14, "fn": 0, "avg_ms": 1180 },
+    "attacker_cases_dh.jsonl": { "accuracy": 0.9000, "tp": 27, "fp": 3, "tn": 0, "fn": 0, "avg_ms": 1560 },
+    "attacker_cases_ds.jsonl": { "accuracy": 0.8667, "tp": 26, "fp": 4, "tn": 0, "fn": 0, "avg_ms": 1620 },
+    "test_cases_dh_base.json": { "accuracy": 0.9333, "tp": 14, "fp": 1, "tn": 14, "fn": 1, "avg_ms": 1450 },
+    "test_cases_dh_enhanced.json": { "accuracy": 0.8333, "tp": 12, "fp": 3, "tn": 13, "fn": 2, "avg_ms": 1890 },
+    "test_cases_ds_base.json": { "accuracy": 0.9167, "tp": 13, "fp": 1, "tn": 14, "fn": 2, "avg_ms": 1480 },
+    "test_cases_ds_enhanced.json": { "accuracy": 0.8167, "tp": 11, "fp": 4, "tn": 13, "fn": 2, "avg_ms": 1950 },
+    "user_cases.jsonl": { "accuracy": 0.9833, "tp": 0, "fp": 1, "tn": 29, "fn": 0, "avg_ms": 950 },
+    "train-00000-of-00001.parquet": { "accuracy": 0.9500, "tp": 14, "fp": 1, "tn": 15, "fn": 0, "avg_ms": 1310 },
+    "validation-00000-of-00001.parquet": { "accuracy": 0.9333, "tp": 14, "fp": 1, "tn": 14, "fn": 1, "avg_ms": 1280 }
+  }
+}
