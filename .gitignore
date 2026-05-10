@@ -7,14 +7,18 @@ __pycache__/
 
 # Models & Weights (Large Files)
 models/
+!models/l2/kingsguard_l2_vae.pth
+!models/l2/calibrated_threshold.json
 *.pth
 *.safetensors
 *.bin
 
 # Data & Storage
 data/storage/*.db
+!data/storage/final_causal_model.db
 data/storage/*.json
 data/datasets/
+!data/datasets/injecagent_data/
 !data/datasets/.gitkeep
 extras/
 scratch/
