@@ -38,7 +38,7 @@ else:
 L1_HF_MODEL_ID  = "protectai/deberta-v3-base-prompt-injection-v2"
 L1_LOCAL_CACHE  = os.path.join(BASE_DIR, "models", "l1")
 
-_EXPECTED_L1_LABELS = {"injection", "legitimate"}
+_EXPECTED_L1_LABELS = {"injection", "safe"}
 
 def _is_valid_prompt_guard_cache() -> bool:
     """Check if models/l1/ contains the real Llama-Prompt-Guard (3-class model)."""
@@ -55,7 +55,7 @@ def _is_valid_prompt_guard_cache() -> bool:
         return False
 
 def get_l1_model():
-    """Load Llama-Prompt-Guard-2-86M. Validates local cache before using it."""
+    """Load ProtectAI's deberta-v3-base-prompt-injection-v2. Validates local cache before using it."""
     if "tokenizer" not in _l1_model_cache:
         import torch, shutil
         from transformers import AutoModelForSequenceClassification, AutoTokenizer
@@ -68,7 +68,7 @@ def get_l1_model():
             shutil.rmtree(L1_LOCAL_CACHE)
 
         model_source = L1_LOCAL_CACHE if cache_ok else L1_HF_MODEL_ID
-        print(f"[L1] Loading Llama-Prompt-Guard-2-86M from: {model_source}")
+        print(f"[L1] Loading ProtectAI DeBERTa-v3 from: {model_source}")
 
         tokenizer = AutoTokenizer.from_pretrained(model_source)
         model     = AutoModelForSequenceClassification.from_pretrained(model_source)
@@ -88,7 +88,7 @@ def get_l1_model():
         _l1_model_cache["model"]     = model
         _l1_model_cache["device"]    = device
         _l1_model_cache["labels"]    = model.config.id2label
-        print(f"[L1] Prompt-Guard ready. Labels: {model.config.id2label}")
+        print(f"[L1] DeBERTa-v3 Screener ready. Labels: {model.config.id2label}")
     return (
         _l1_model_cache["tokenizer"],
         _l1_model_cache["model"],
