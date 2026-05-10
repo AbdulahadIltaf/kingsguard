@@ -9,7 +9,6 @@ ENV PORT=7860
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
-    software-properties-common \
     git \
     libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/*
